@@ -1,4 +1,5 @@
 function add(num1, num2){
+    
     let add = num1 + num2;
     return add;
 }
@@ -16,6 +17,9 @@ function divide(num1, num2){
 }
 
 function calculator (a, b, operator){
+    if( typeof a !== 'number' || typeof b !== 'number' ){
+        return 'Please provide the number. '
+    }
     if(operator === 'add'){
         let result = add(a, b);
         return result;
@@ -36,5 +40,5 @@ function calculator (a, b, operator){
         console.log("only 'add', 'subtract', 'multiply' operation is allowed. 'divide' ")
     }
 }
-let calculation = calculator(4, 2, 'divide');
-console.log( 'Result =',calculation);
+let calculation = calculator(6, 3, 'divide');
+console.log( 'Result:',calculation);
